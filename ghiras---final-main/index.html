@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gharas - منصة الزراعة الذكية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              cairo: ['Cairo', 'sans-serif'],
+            },
+            colors: {
+              // Palette provided by user
+              // Light: 739E6C (Green), 456882 (Blue), E7CFBC (Sand Dark), F4E9D7 (Sand Light), A27B5C (Brown)
+              // Dark: 2C3930 (Dark Green), 556E53 (Olive), 29435C (Dark Blue), 152A38 (Darker Blue), 9A8976 (Muted Brown)
+              agri: {
+                50: '#F4E9D7',  // Light BG
+                100: '#E7CFBC', // Light Card/Accent
+                500: '#739E6C', // Primary
+                600: '#5E8558', // Hover
+                700: '#556E53', // Dark Mode Text/Accent
+                800: '#2C3930', // Dark Mode BG
+                900: '#1A221D',
+              },
+              ocean: {
+                500: '#456882', // Secondary
+                600: '#375368',
+                700: '#29435C', // Dark Mode Secondary
+                800: '#152A38', // Dark Mode Deep
+                900: '#0E1C26',
+              },
+              sand: {
+                50: '#F4E9D7',
+                100: '#E7CFBC',
+                500: '#A27B5C', // Accent
+                900: '#9A8976', // Dark Mode Text
+              },
+              // Mapping to generic grays for ease of use in existing components
+              gray: {
+                50: '#F4E9D7',  // Page BG Light
+                100: '#FFFFFF', // Card BG Light (Clean look)
+                200: '#E7CFBC', // Borders
+                300: '#d1c2ad',
+                700: '#29435C', // Text/Borders Dark
+                800: '#2A3B32', // Card BG Dark (Slightly lighter than page)
+                900: '#2C3930', // Page BG Dark
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        transition: background-color 0.3s, color 0.3s;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #739E6C;
+        border-radius: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-agri-50 text-gray-900 dark:bg-agri-800 dark:text-sand-50 transition-colors duration-300">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

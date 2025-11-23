@@ -1,0 +1,9 @@
+{
+  "name": "Gharas - غراس",
+  "description": "منصة الزراعة الذكية المتكاملة",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation",
+    "microphone"
+  ]
+}
